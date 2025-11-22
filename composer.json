@@ -1,0 +1,22 @@
+{
+  "name": "skydiablo/vlan-selector",
+  "description": "RADIUS service for MAC authentication with VLAN assignment",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "skydiablo/skyradius": "dev-master",
+    "react/socket": "^v1.0",
+    "symfony/yaml": "^v7.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "SkyDiablo\\VLANSelector\\": "src/"
+    }
+  },
+  "scripts": {
+    "start": "php server.php"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
+

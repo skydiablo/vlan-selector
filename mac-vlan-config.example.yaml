@@ -1,0 +1,16 @@
+# VLAN to MAC Address mapping configuration
+# Format: VLAN ID -> list of MAC addresses
+mapping:
+  100:  # VLAN-ID
+    - "00:11:22:33:44:55"
+    - "aa:bb:cc:dd:ee:ff"
+  200:  # VLAN-ID
+    - "001122334455"
+    - "aabbccddeeff"
+  default: 1  # default VLAN-ID for unknown MAC addresses
+
+# RADIUS server configuration
+radius:
+  port: 1812
+  secret: "testing123"
+
