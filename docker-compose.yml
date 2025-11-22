@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  radius-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vlan-selector
+    ports:
+      - "1812:1812/udp"
+    volumes:
+      # Mount config file for easy updates without rebuilding
+      - ./mac-vlan-config.yaml:/app/mac-vlan-config.yaml:ro
+    restart: unless-stopped
+    networks:
+      - radius-network
+
+networks:
+  radius-network:
+    driver: bridge
+

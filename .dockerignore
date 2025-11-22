@@ -1,0 +1,10 @@
+vendor/
+.git/
+.gitignore
+*.md
+LICENSE
+mac-vlan-config.example.yaml
+docker-compose.yml
+Dockerfile
+.dockerignore
+
