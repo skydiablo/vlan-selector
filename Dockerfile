@@ -13,7 +13,9 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /app
 
 # Copy composer files
-COPY composer.json composer.lock ./
+COPY composer.json ./
+# Copy composer.lock if it exists (optional for reproducible builds)
+COPY composer.lock* ./
 
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction
